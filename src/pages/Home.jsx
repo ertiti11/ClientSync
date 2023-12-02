@@ -1,12 +1,10 @@
 import Navbar from "../components/Navbar";
-import { useState } from "react";
 import ClientCardList from "../components/ClientCardList";
 import {
   IconInfoSquareRoundedFilled,
   IconCategory2,
 } from "@tabler/icons-react";
 export default function Home() {
-  const [size, setSize] = useState(64);
   return (
     <>
       <div className=" flex ">
