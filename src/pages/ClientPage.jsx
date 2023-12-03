@@ -45,8 +45,11 @@ export default function ClientPage() {
     <div className="w-full flex ">
       <Navbar />
       <div className=" m-20 w-full">
-        <div className={`inline-block w-12 h-12 mr-3 rounded-full bg-gray-200`}>
-          <div className="flex items-center justify-center w-full h-full  text-xl font-medium text-gray-500 uppercase">
+        <div
+          style={{ backgroundColor: client.color }}
+          className={`inline-block w-12 h-12 mr-3 rounded-full `}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-xl font-medium text-white uppercase">
             {client.name[0]}
           </div>
         </div>
@@ -108,7 +111,10 @@ export default function ClientPage() {
                   <img src={color} alt="" />
                   <p className="text-sm ">Color</p>
                 </div>
-                <p className="text-sm">{client.country}</p>
+                <div
+                  style={{ backgroundColor: client.color }}
+                  className="inline-block w-4 h-4 mr-3 rounded-full bg-gray-200"
+                ></div>
               </div>
               <div className="flex justify-between mt-4">
                 <div className="flex gap-2">
