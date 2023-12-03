@@ -1,17 +1,19 @@
 import { useParams } from "react-router-dom";
-import { getClientData } from "../api/clients";
 import { useState, useEffect, useCallback } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
+import PocketBase from "pocketbase";
 
 export default function ClientPage() {
+  const pb = new PocketBase("https://clients.pockethost.io");
+  pb.autoCancellation(false);
   const { id } = useParams();
   const [client, setClient] = useState(null);
   const [error, setError] = useState(null);
 
   const fetchData = useCallback(async () => {
     try {
-      const data = await getClientData(id);
+      const data = await pb.collection("clients").getOne(id);
       setClient(data);
     } catch (error) {
       setError(`Error al obtener datos del cliente: ${error.message}`);

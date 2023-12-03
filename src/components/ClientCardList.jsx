@@ -1,7 +1,22 @@
-import ClientCard from "./ClientCard";
-import { clients } from "../api/clients";
+import PocketBase from "pocketbase";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 export default function ClientCardList() {
+  const [clients, setClients] = useState([]);
+  const pb = new PocketBase("https://clients.pockethost.io");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const client = await pb.collection("clients").getList(1, 50);
+      setClients(client);
+    };
+
+    fetchData();
+  }, []);
+  if (!clients.items) {
+    return <Loader />;
+  }
   return (
     <section className="container px-4 mx-auto">
       <div className="flex flex-col mt-6">
