@@ -46,8 +46,8 @@ export default function ClientPage() {
       <Navbar />
       <div className=" m-20 w-full">
         <div
-          style={{ backgroundColor: client.color }}
-          className={`inline-block w-12 h-12 mr-3 rounded-full `}
+          style={{ backgroundColor: client.color ?? "#0ff" }}
+          className={`inline-block w-12 h-12 mr-3 rounded-full`}
         >
           <div className="flex items-center justify-center w-full h-full  text-xl font-medium text-white uppercase">
             {client.name[0]}

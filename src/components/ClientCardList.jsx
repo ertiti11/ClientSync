@@ -82,7 +82,14 @@ export default function ClientCardList() {
                       <tr key={client.id}>
                         <td className="px-4 py-4 text-sm font-medium whitespace-nowrap">
                           <div className="flex items-center">
-                            <div className="inline-block w-10 h-10 mr-3 rounded-full bg-gray-200">
+                            <div
+                              style={{
+                                backgroundColor: client.color
+                                  ? client.color
+                                  : "#0ff",
+                              }}
+                              className="inline-block w-10 h-10 mr-3 rounded-full"
+                            >
                               <div className="flex items-center justify-center w-full h-full text-sm font-medium text-gray-500 uppercase">
                                 {client.name[0]}
                               </div>
