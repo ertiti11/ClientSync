@@ -3,7 +3,11 @@ import { useState, useEffect, useCallback } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import PocketBase from "pocketbase";
-
+import user from "../assets/user.svg";
+import phone from "../assets/phone.svg";
+import email from "../assets/at.svg";
+import color from "../assets/color-filter.svg";
+import date from "../assets/date.svg";
 export default function ClientPage() {
   const pb = new PocketBase("https://clients.pockethost.io");
   pb.autoCancellation(false);
@@ -75,26 +79,43 @@ export default function ClientPage() {
             <h2 className=" uppercase text-gray-500">informacion</h2>
             <div className=" max-w-sm">
               <div className="flex justify-between mt-4">
-                <div className="text-sm text-gray-500">Nombre</div>
-                <div className="text-sm">
-                  {client.name} {client.lastNames}
+                <div className="flex items-center gap-2">
+                  <img src={user} alt="" />
+                  <p className="text-sm ">Nombre</p>
                 </div>
+
+                <p className="text-sm">
+                  {client.name} {client.lastNames}
+                </p>
               </div>
               <div className="flex justify-between mt-4">
-                <div className="text-sm text-gray-500">Telefono</div>
-                <div className="text-sm">{client.phone}</div>
+                <div className="flex gap-2">
+                  <img src={phone} alt="" />
+                  <p className="text-sm ">Telefono</p>
+                </div>
+
+                <p className="text-sm">{client.phone}</p>
               </div>
               <div className="flex justify-between mt-4">
-                <div className="text-sm text-gray-500">Ciudad</div>
-                <div className="text-sm">{client.city}</div>
+                <div className="flex gap-2">
+                  <img src={email} alt="" />
+                  <p className="text-sm ">Email</p>
+                </div>
+                <p className="text-sm">{client.email}</p>
               </div>
               <div className="flex justify-between mt-4">
-                <div className="text-sm text-gray-500">Pais</div>
-                <div className="text-sm">{client.country}</div>
+                <div className="flex gap-2">
+                  <img src={color} alt="" />
+                  <p className="text-sm ">Color</p>
+                </div>
+                <p className="text-sm">{client.country}</p>
               </div>
               <div className="flex justify-between mt-4">
-                <div className="text-sm text-gray-500">Codigo Postal</div>
-                <div className="text-sm">{client.zipCode}</div>
+                <div className="flex gap-2">
+                  <img src={date} alt="" />
+                  <p className="text-sm ">Fecha de creación</p>
+                </div>
+                <p className="text-sm">{client.zipCode}</p>
               </div>
             </div>
           </div>
