@@ -121,7 +121,10 @@ export default function ClientPage() {
                   <img src={date} alt="" />
                   <p className="text-sm ">Fecha de creación</p>
                 </div>
-                <p className="text-sm">{client.zipCode}</p>
+              </div>
+
+              <div className=" border-b-2 border-gray-200 border-opacity-20">
+                <h2 className="mt-16 font-bold text-2xl mb-4">Facturación</h2>
               </div>
             </div>
           </div>

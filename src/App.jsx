@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import ClientPage from "./pages/ClientPage";
 import LoggedRoute from "./pages/LoggedRoute";
 import NotFound from "./pages/NotFound";
-import Table from "./components/skeletons/Table";
 function App() {
   return (
     <>
