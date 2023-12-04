@@ -126,6 +126,19 @@ export default function ClientPage() {
               <div className=" border-b-2 border-gray-200 border-opacity-20">
                 <h2 className="mt-16 font-bold text-2xl mb-4">Facturación</h2>
               </div>
+              <div className=" py-12">
+                <div className="stats shadow">
+                  <div className="stat place-items-center">
+                    <div className="stat-title">Trabajos</div>
+                    <div className="stat-value">32</div>
+                  </div>
+
+                  <div className="stat place-items-center">
+                    <div className="stat-title">Facturado</div>
+                    <div className="stat-value text-secondary">31€</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
