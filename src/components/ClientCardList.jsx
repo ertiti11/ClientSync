@@ -88,9 +88,9 @@ export default function ClientCardList() {
                                   ? client.color
                                   : "#0ff",
                               }}
-                              className="inline-block w-10 h-10 mr-3 rounded-full"
+                              className="inline-block w-10 h-10 mr-3 rounded-full text-white"
                             >
-                              <div className="flex items-center justify-center w-full h-full text-sm font-medium text-gray-500 uppercase">
+                              <div className="flex items-center justify-center w-full h-full text-sm font-medium text-white uppercase">
                                 {client.name[0]}
                               </div>
                             </div>
