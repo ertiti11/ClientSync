@@ -7,12 +7,14 @@ import Home from "./pages/Home";
 import ClientPage from "./pages/ClientPage";
 import LoggedRoute from "./pages/LoggedRoute";
 import NotFound from "./pages/NotFound";
+import Table from "./components/skeletons/Table";
 function App() {
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
           <Routes>
+            {/* <Route path="/" element={<Table />} /> */}
             <Route element={<ProtectedRoute />}>
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />
@@ -21,7 +23,8 @@ function App() {
             <Route element={<LoggedRoute />}>
               <Route path="/login" element={<Login />} />
             </Route>
-            <Route path="*" element={<NotFound />} /> {/* Esta es la ruta 404 */}
+            <Route path="*" element={<NotFound />} />{" "}
+            {/* Esta es la ruta 404 */}
           </Routes>
         </BrowserRouter>
       </AuthProvider>
