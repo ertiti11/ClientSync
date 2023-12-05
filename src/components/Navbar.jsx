@@ -23,7 +23,8 @@ export default function Navbar() {
         <Link
           to={"/"}
           href="#"
-          className="p-1.5 text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
+          data-tip="Home"
+          className="p-1.5 tooltip  text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +45,8 @@ export default function Navbar() {
         <Link
           to={"/"}
           href="#"
-          className="p-1.5 text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
+          data-tip="Earnings"
+          className="p-1.5 tooltip  text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +67,8 @@ export default function Navbar() {
         <Link
           to={"/"}
           href="#"
-          className="p-1.5 text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
+          data-tip="Works"
+          className="p-1.5 tooltip  text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +89,8 @@ export default function Navbar() {
         <Link
           to={"/"}
           href="#"
-          className="p-1.5 text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
+          data-tip="Issues"
+          className="p-1.5 tooltip  text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +111,8 @@ export default function Navbar() {
         <Link
           to={"/"}
           href="#"
-          className="p-1.5 text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
+          data-tip="clients"
+          className="p-1.5 tooltip  text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +142,8 @@ export default function Navbar() {
         <Link
           to={"/"}
           href="#"
-          className="p-1.5 text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:bg-gray-800 bg-gray-100"
+          data-tip="settings"
+          className="p-1.5 tooltip  text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:bg-gray-800 bg-gray-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
