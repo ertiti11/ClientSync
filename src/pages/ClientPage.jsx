@@ -138,7 +138,7 @@ export default function ClientPage() {
               <div className=" py-12">
                 <div className="stats shadow">
                   <div className="stat place-items-center">
-                    <Link to={`/user/works/${id}`} className="stat-title">
+                    <Link to={`/client/works/${id}`} className="stat-title">
                       Trabajos
                     </Link>
                     <div className="stat-value">{earns.items.length}</div>

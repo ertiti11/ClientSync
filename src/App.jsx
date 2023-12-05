@@ -7,17 +7,18 @@ import Home from "./pages/Home";
 import ClientPage from "./pages/ClientPage";
 import LoggedRoute from "./pages/LoggedRoute";
 import NotFound from "./pages/NotFound";
+import ClientWorks from "./pages/ClientWorks";
 function App() {
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            {/* <Route path="/" element={<Table />} /> */}
             <Route element={<ProtectedRoute />}>
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />
               <Route path="/client/:id" element={<ClientPage />} />
+              <Route path="/client/works/:id" element={<ClientWorks />} />
             </Route>
             <Route element={<LoggedRoute />}>
               <Route path="/login" element={<Login />} />
