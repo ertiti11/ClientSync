@@ -8,17 +8,25 @@ import phone from "../assets/phone.svg";
 import email from "../assets/at.svg";
 import color from "../assets/color-filter.svg";
 import date from "../assets/date.svg";
+import { Link } from "react-router-dom";
 export default function ClientPage() {
   const pb = new PocketBase("https://clients.pockethost.io");
   pb.autoCancellation(false);
   const { id } = useParams();
   const [client, setClient] = useState(null);
+  const [earns, setEarns] = useState(0);
   const [error, setError] = useState(null);
 
   const fetchData = useCallback(async () => {
     try {
       const data = await pb.collection("clients").getOne(id);
+      const earn = await pb.collection("works").getList(1, 50, {
+        filter: 'workUser.id="' + id + '"',
+        fields: "price",
+      });
+
       setClient(data);
+      setEarns(earn);
     } catch (error) {
       setError(`Error al obtener datos del cliente: ${error.message}`);
     }
@@ -43,6 +51,7 @@ export default function ClientPage() {
   // Renderizar la información del cliente
   return (
     <div className="w-full flex ">
+      {console.log(earns)}
       <Navbar />
       <div className=" m-20 w-full">
         <div
@@ -129,13 +138,18 @@ export default function ClientPage() {
               <div className=" py-12">
                 <div className="stats shadow">
                   <div className="stat place-items-center">
-                    <div className="stat-title">Trabajos</div>
-                    <div className="stat-value">32</div>
+                    <Link to={`/user/works/${id}`} className="stat-title">
+                      Trabajos
+                    </Link>
+                    <div className="stat-value">{earns.items.length}</div>
                   </div>
 
                   <div className="stat place-items-center">
                     <div className="stat-title">Facturado</div>
-                    <div className="stat-value text-secondary">31€</div>
+                    <div className="stat-value text-secondary">
+                      {/* suma de todos los earns.items */}
+                      {earns.items.reduce((a, b) => a + b.price, 0)}€
+                    </div>
                   </div>
                 </div>
               </div>
