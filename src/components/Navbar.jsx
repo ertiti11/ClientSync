@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logoutIcon from "../assets/logout.svg";
 import PocketBase from "pocketbase";
-
+import logo from "../assets/logoazul.png";
 export default function Navbar() {
   const pb = new PocketBase("https://clients.pockethost.io");
 
@@ -10,14 +10,10 @@ export default function Navbar() {
     window.location.href = "/login";
   };
   return (
-    <aside className="flex flex-col items-center w-16 h-screen py-8 overflow-y-auto bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700">
-      <nav className="flex flex-col flex-1 space-y-6">
-        <Link to={"/"}>
-          <img
-            className="w-auto h-6 "
-            src="https://merakiui.com/images/logo.svg"
-            alt=""
-          />
+    <aside className="flex overflow-hidden flex-col items-center w-18 h-screen py-8  bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700">
+      <nav className="flex flex-col flex-1 space-y-6 items-center">
+        <Link to={"/"} lassName="w-auto h-8 ">
+          <img className="w-auto h-8 " src={logo} alt="" />
         </Link>
 
         <Link
