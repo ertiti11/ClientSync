@@ -14,6 +14,7 @@
 - [] Add form to add new user.
 - [] Lenguage support.
 - [] Tests.
+- [] Edit existing clients.
 
 # Fixes
 
