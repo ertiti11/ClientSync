@@ -12,7 +12,7 @@ export default function Login() {
     document.title = "Login";
   }, []);
 
-  const { sigIn, error, user } = useAuth();
+  const { sigIn, user } = useAuth();
   const navigate = useNavigate();
   const onSubmit = handleSubmit((data) => {
     sigIn(data);

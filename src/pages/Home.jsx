@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import ClientCardList from "../components/ClientCardList";
+import AddClient from "../components/AddClient";
 export default function Home() {
   return (
     <>
@@ -57,6 +58,13 @@ export default function Home() {
             </div>
           </div>
           <ClientCardList />
+          <button
+            className="btn"
+            onClick={() => document.getElementById("AddUser").showModal()}
+          >
+            open modal
+          </button>
+          <AddClient />
         </div>
       </div>
     </>
