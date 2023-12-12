@@ -11,11 +11,11 @@
 - [] Add liveChat.
 - [] Add option in home page to change from table to cards.
 - [] Add work form to post new work for user.
-- [] Add form to add new user.
+- [in progress] Add form to add new user.
 - [] Lenguage support.
 - [] Tests.
 - [] Edit existing clients.
-
+- [] kaban 
 # Fixes
 
 - [x]Component loading in client page (don´t wait to load all page, wait only for component)
