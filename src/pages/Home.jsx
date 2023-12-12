@@ -60,7 +60,12 @@ export default function Home() {
           <ClientCardList />
           <button
             className="btn"
-            onClick={() => document.getElementById("AddUser").showModal()}
+            onClick={() => {
+              const dialog = document.getElementById("AddUser");
+              if (dialog) {
+                dialog.setAttribute("open", "");
+              }
+            }}
           >
             open modal
           </button>

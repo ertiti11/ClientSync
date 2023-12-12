@@ -100,11 +100,18 @@ export default function AddClient() {
               </div>
             </div>
 
-            <div className="flex justify-end mt-6">
+            <div className="flex justify-between mt-6">
               <button
-                type="submit"
-                className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transhtmlForm  rounded-md  focus:outline-none "
+                onClick={() => {
+                  const dialog = document.getElementById("AddUser");
+                  if (dialog) {
+                    dialog.removeAttribute("open");
+                  }
+                }}
               >
+                Close
+              </button>
+              <button type="submit" className="btn ">
                 Save
               </button>
             </div>
