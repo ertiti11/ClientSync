@@ -16,6 +16,7 @@
 - [] Tests.
 - [] Edit existing clients.
 - [] kaban 
+- [] Make skeletons for loading.
 # Fixes
 
 - [x]Component loading in client page (don´t wait to load all page, wait only for component)
