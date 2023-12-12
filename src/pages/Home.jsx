@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import ClientCardList from "../components/ClientCardList";
 import AddClient from "../components/AddClient";
+import plus from "../assets/plus.svg";
 export default function Home() {
   return (
     <>
@@ -36,7 +37,19 @@ export default function Home() {
               </svg>
               <h1 className="text-2xl font-bold">Clientes</h1>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center gap-6 py-0">
+            <button
+            className="btn btn-primary w-auto btn-sm"
+            onClick={() => {
+              const dialog = document.getElementById("AddUser");
+              if (dialog) {
+                dialog.setAttribute("open", "");
+              }
+            }}
+          >
+            <img src={plus} alt="" />
+            Add user
+          </button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="hover:cursor-pointer hover:scale-125 transition-transform"
@@ -58,17 +71,7 @@ export default function Home() {
             </div>
           </div>
           <ClientCardList />
-          <button
-            className="btn"
-            onClick={() => {
-              const dialog = document.getElementById("AddUser");
-              if (dialog) {
-                dialog.setAttribute("open", "");
-              }
-            }}
-          >
-            open modal
-          </button>
+          
           <AddClient />
         </div>
       </div>

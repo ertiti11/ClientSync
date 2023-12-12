@@ -10,9 +10,9 @@ export default function Navbar() {
     window.location.href = "/login";
   };
   return (
-    <aside className="flex overflow-hidden flex-col items-center w-18 h-screen py-8  bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700">
+    <aside className="flex overflow-hidden flex-col items-center w-16 h-screen py-8  bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700">
       <nav className="flex flex-col flex-1 space-y-6 items-center">
-        <Link to={"/"} lassName="w-auto h-8 ">
+        <Link to={"/"} className="w-auto h-8 ">
           <img className="w-auto h-8 " src={logo} alt="" />
         </Link>
 
