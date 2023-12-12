@@ -17,5 +17,5 @@
 
 # Fixes
 
-- Component loading in client page (don´t wait to load all page, wait only for component)
+- [x]Component loading in client page (don´t wait to load all page, wait only for component)
 -
