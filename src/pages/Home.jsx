@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
-import ClientCardList from "../components/ClientCardList";
+// import ClientCardList from "../components/ClientCardList";
+import DemoPage from "@/components/ClientTable/page";
 import AddClient from "../components/AddClient";
-import plus from "../assets/plus.svg";
 export default function Home() {
   return (
     <>
@@ -59,7 +59,7 @@ export default function Home() {
               </svg>
             </div>
           </div>
-          <ClientCardList />
+          <DemoPage />
         </div>
       </div>
     </>
