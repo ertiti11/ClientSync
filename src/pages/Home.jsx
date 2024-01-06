@@ -38,18 +38,7 @@ export default function Home() {
               <h1 className="text-2xl font-bold">Clientes</h1>
             </div>
             <div className="flex items-center gap-6 py-0">
-              <button
-                className="btn btn-primary w-auto btn-sm"
-                onClick={() => {
-                  const dialog = document.getElementById("AddUser");
-                  if (dialog) {
-                    dialog.setAttribute("open", "");
-                  }
-                }}
-              >
-                <img src={plus} alt="" />
-                Add user
-              </button>
+              <AddClient />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="hover:cursor-pointer hover:scale-125 transition-transform"
@@ -71,8 +60,6 @@ export default function Home() {
             </div>
           </div>
           <ClientCardList />
-
-          <AddClient />
         </div>
       </div>
     </>
