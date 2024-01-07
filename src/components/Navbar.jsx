@@ -40,7 +40,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          to={"/"}
+          to={"/earnings"}
           href="#"
           data-tip="Earnings"
           className="p-1.5 tooltip  text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
