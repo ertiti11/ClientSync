@@ -1,15 +1,28 @@
 import { Button } from "@/components/ui/button";
+import { getData } from "../EarningTable/data-table";
+import { Skeleton } from "@/components/ui/skeleton";
+import * as React from "react";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 
 export default function Resume({ className }) {
+  var totalEarnings = 0;
+  const [data, setData] = React.useState([]);
+  React.useEffect(() => {
+    getData().then((data) => setData(data));
+  }, []);
+
+  //sumar todos los price del array de data
+  data.map((item) => {
+    totalEarnings += item.price;
+  });
+
   return (
     <Card className={` p-5 bg-white ${className} `}>
       <CardHeader>
@@ -22,9 +35,13 @@ export default function Resume({ className }) {
             <Label className="font-normal leading-snug text-base ">
               Earnings
             </Label>
-            <p className="text-2xl font-semibold leading-none tracking-tight">
-              2312€
-            </p>
+            {totalEarnings === 0 ? (
+              <Skeleton className="h-6 w-12 rounded-full" />
+            ) : (
+              <p className="text-2xl font-semibold leading-none tracking-tight">
+                {totalEarnings} €
+              </p>
+            )}
           </div>
           <div className="flex flex-col">
             <Label className="font-normal leading-snug text-base ">Works</Label>

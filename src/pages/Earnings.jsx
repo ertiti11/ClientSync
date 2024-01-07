@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar";
 import Resume from "../components/Earnings/Resume";
 import EChart from "../components/Earnings/EChart";
+import { getData } from "../components/EarningTable/data-table";
 export default function Earnings() {
+  getData().then((data) => console.log(data));
   return (
     <div className="bg-background">
       <Navbar />

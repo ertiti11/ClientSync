@@ -5,7 +5,6 @@ import { ArrowUpDown, ChevronDown, MoreHorizontal, Trash } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
