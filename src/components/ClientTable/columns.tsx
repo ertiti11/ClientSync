@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import * as React from "react";
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
+import { pb } from "@/api/clients";
+import { ArrowUpDown, ChevronDown, MoreHorizontal, Trash } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
@@ -108,8 +109,20 @@ export const columns: ColumnDef<Client>[] = [
               Copy Client ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View Client details</DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link to={`/client/${row.original.id}`}>view Customer</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <button
+                className="flex items-center gap-3"
+                onClick={async () => {
+                  await pb.collection("clients").delete(row.original.id);
+                }}
+              >
+                <Trash width={16} />
+                Delete
+              </button>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

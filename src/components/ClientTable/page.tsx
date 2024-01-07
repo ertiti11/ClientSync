@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Loader from "../Loader";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -97,7 +98,7 @@ export default function DemoPage() {
                       column.toggleVisibility(!!value)
                     }
                   >
-                    {column.collectionId}
+                    {column.id}
                   </DropdownMenuCheckboxItem>
                 );
               })}
@@ -145,9 +146,9 @@ export default function DemoPage() {
               <TableRow>
                 <TableCell
                   colSpan={columns.length}
-                  className="h-24 text-center"
+                  className="w-full flex items-center justify-center"
                 >
-                  No results.
+                  <Loader />
                 </TableCell>
               </TableRow>
             )}
