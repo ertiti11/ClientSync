@@ -1,4 +1,5 @@
 import { Client } from "./columns";
+import PocketBase from "pocketbase";
 
 export const data: Client[] = [
   {
@@ -26,3 +27,13 @@ export const data: Client[] = [
     color: "green",
   },
 ];
+
+export async function getData() {
+  const pb = new PocketBase("https://clients.pockethost.io");
+  const resultList = await pb.collection("clients").getList(1, 50);
+  return resultList.items;
+}
+
+getData().then((data) => {
+  console.log(data); // Aquí data es el JSON, no la promesa
+});

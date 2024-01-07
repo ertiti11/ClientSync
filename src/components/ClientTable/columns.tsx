@@ -15,7 +15,7 @@ import { ColumnDef } from "@tanstack/react-table";
 
 export type Client = {
   id: string;
-  Name: string;
+  name: string;
   lastNames: string;
   email: string;
   phone: string;
@@ -45,9 +45,9 @@ export const columns: ColumnDef<Client>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "Name",
+    accessorKey: "name",
     header: "Name",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("Name")}</div>,
+    cell: ({ row }) => <div className="capitalize">{row.getValue("name")}</div>,
   },
   {
     accessorKey: "lastNames",
