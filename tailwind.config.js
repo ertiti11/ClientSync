@@ -88,9 +88,6 @@ export default {
       },
     },
   },
-  daisyui: {
-    themes: [ 
-      "dark"],
-  },
-  plugins: ["tailwindcss-animate", "daisyui"],
+  
+  plugins: ["tailwindcss-animate"],
 };

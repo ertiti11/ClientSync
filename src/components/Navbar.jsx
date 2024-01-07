@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logoutIcon from "../assets/logout.svg";
 import PocketBase from "pocketbase";
 import logo from "../assets/logoazul.png";
+import { ModeToggle } from "./mode-toggle";
 export default function Navbar() {
   const pb = new PocketBase("https://clients.pockethost.io");
 
@@ -10,7 +11,7 @@ export default function Navbar() {
     window.location.href = "/login";
   };
   return (
-    <aside className="flex fixed top-0 left-0 h-screen  overflow-hidden flex-col items-center w-16 h-screen py-8  bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700">
+    <aside className="flex fixed top-0 left-0   overflow-hidden flex-col items-center w-16 h-screen py-8  bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700">
       <nav className="flex flex-col flex-1 space-y-6 items-center">
         <Link to={"/"} className="w-auto h-8 ">
           <img className="w-auto h-8 " src={logo} alt="" />
@@ -125,6 +126,7 @@ export default function Navbar() {
             />
           </svg>
         </Link>
+        <ModeToggle />
       </nav>
 
       <div className="flex flex-col space-y-6 items-center justify-center">
