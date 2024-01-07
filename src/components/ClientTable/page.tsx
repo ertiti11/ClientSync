@@ -14,7 +14,6 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -36,7 +35,7 @@ import { columns, Client } from "./columns";
 import { getData } from "./data-table";
 
 export default function DemoPage() {
-  const [data, setData] = React.useState<Client[]>([]);
+  const [data, setData] = React.useState([]);
   React.useEffect(() => {
     getData().then((data) => setData(data));
   }, []);
@@ -98,7 +97,7 @@ export default function DemoPage() {
                       column.toggleVisibility(!!value)
                     }
                   >
-                    {column.id}
+                    {column.collectionId}
                   </DropdownMenuCheckboxItem>
                 );
               })}

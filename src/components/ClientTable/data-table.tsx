@@ -33,7 +33,3 @@ export async function getData() {
   const resultList = await pb.collection("clients").getList(1, 50);
   return resultList.items;
 }
-
-getData().then((data) => {
-  console.log(data); // Aquí data es el JSON, no la promesa
-});

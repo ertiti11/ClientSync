@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ColumnDef } from "@tanstack/react-table";
+import { Link } from "react-router-dom";
 
 export type Client = {
   id: string;
@@ -21,6 +22,7 @@ export type Client = {
   phone: string;
   color: string;
 };
+
 export const columns: ColumnDef<Client>[] = [
   {
     id: "select",
@@ -47,7 +49,11 @@ export const columns: ColumnDef<Client>[] = [
   {
     accessorKey: "name",
     header: "Name",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("name")}</div>,
+    cell: ({ row }) => (
+      <Link to={`/client/${row.original.id}`} className="capitalize">
+        {row.getValue("name")}
+      </Link>
+    ),
   },
   {
     accessorKey: "lastNames",
