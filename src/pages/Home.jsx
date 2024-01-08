@@ -2,18 +2,14 @@ import Navbar from "../components/Navbar";
 // import ClientCardList from "../components/ClientCardList";
 import DemoPage from "@/components/ClientTable/page";
 import AddClient from "../components/AddClient";
+import Header from "../components/Header";
 export default function Home() {
   return (
     <>
       <div className=" flex ">
         <Navbar />
         <div className=" ml-16 w-full flex flex-col items-center p-14">
-          <div className="flex w-full rounded-2xl mb-4 overflow-hidden max-h-[200px]">
-            <img
-              src="https://images.unsplash.com/photo-1700495723803-f7a005efe2a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjA2NzV8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDEyMDMwNTB8&ixlib=rb-4.0.3&q=80&w=1080"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
+          <Header />
           <div className="w-full flex justify-between mb-4">
             <div className="flex gap-3 justify-center items-center">
               <svg
