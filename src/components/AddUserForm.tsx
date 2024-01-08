@@ -1,7 +1,10 @@
 import * as React from "react";
+import { toast } from "sonner"
 import { useEffect } from "react";
 import PocketBase from "pocketbase";
 import { Button } from "@/components/ui/button";
+import { Toaster } from "@/components/ui/sonner"
+
 import {
   Form,
   FormControl,
@@ -112,8 +115,8 @@ export default function AddUserForm() {
             </FormItem>
           )}
         />
-
-        <Button type="submit">Submit</Button>
+<Toaster />
+        <Button  type="submit">Submit</Button>
       </form>
     </Form>
   );
@@ -126,5 +129,14 @@ export default function AddUserForm() {
     const pb = new PocketBase("https://clients.pockethost.io");
 
     await pb.collection("clients").create(data);
+    
+      toast("Event has been created", {
+        description: "Sunday, December 03, 2023 at 9:00 AM",
+        action: {
+          label: "Undo",
+          onClick: () => console.log("Undo"),
+        },
+      })
+    
   }
 }

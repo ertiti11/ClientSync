@@ -984,10 +984,10 @@ export default function Header() {
     <div
       style={{
         backgroundImage: `url("${image}")`,
-        height: "200px", // Asegúrate de que el div tiene un alto y un ancho
+        height: "250px", // Asegúrate de que el div tiene un alto y un ancho
         backgroundSize: "cover", // Esto hará que la imagen cubra todo el div
       }}
-      className="flex w-full rounded-2xl mb-4  max-h-[200px] relative"
+      className="flex w-full rounded-2xl mb-4  max-h-[250px] relative"
     >
       <Popover>
         <PopoverTrigger asChild className="absolute top-36 left-[87%] ">

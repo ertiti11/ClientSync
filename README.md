@@ -2,6 +2,8 @@
 
 Este es un proyecto de React que utiliza la API de PocketBase para obtener y mostrar una lista de clientes.
 
+![](./public/screenshot.png)
+
 # Instalación
 
 Para instalar las dependencias del proyecto, ejecuta:

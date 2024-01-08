@@ -3,6 +3,11 @@ import logoutIcon from "../assets/logout.svg";
 import PocketBase from "pocketbase";
 import logo from "../assets/logoazul.png";
 import { ModeToggle } from "./mode-toggle";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
 export default function Navbar() {
   const pb = new PocketBase("https://clients.pockethost.io");
 
@@ -134,7 +139,7 @@ export default function Navbar() {
           onClick={logout}
           className="p-1.5 text-gray-700 focus:outline-nones transition-colors duration-200 rounded-lg dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
         >
-          <img src={logoutIcon} alt="" />
+          <img className="text-black dark:text-white" src={logoutIcon} alt="" />
         </button>
 
         <Link
@@ -164,13 +169,10 @@ export default function Navbar() {
           </svg>
         </Link>
 
-        <a href="#">
-          <img
-            className="object-cover w-8 h-8 rounded-full"
-            src={logo}
-            alt=""
-          />
-        </a>
+        <Avatar>
+      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarFallback>TITI</AvatarFallback>
+    </Avatar>
       </div>
     </aside>
   );
