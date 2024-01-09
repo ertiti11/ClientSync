@@ -71,6 +71,7 @@ export default function DemoPage() {
     <div className="w-full">
       <div className="flex items-center py-4">
         <Input
+          className="bg-card border-white"
           placeholder="Filter name..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
@@ -106,7 +107,7 @@ export default function DemoPage() {
         </DropdownMenu>
       </div>
       <div className="rounded-md border">
-        <Table>
+        <Table className="bg-card">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>

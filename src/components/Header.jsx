@@ -991,7 +991,7 @@ export default function Header() {
     >
       <Popover>
         <PopoverTrigger asChild className="absolute top-36 left-[87%] ">
-          <Button className="w-auto " variant="outline">
+          <Button className="w-auto" variant="outline">
             Change image
           </Button>
         </PopoverTrigger>
