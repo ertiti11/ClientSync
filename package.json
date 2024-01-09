@@ -23,7 +23,6 @@
     "@tanstack/react-table": "^8.11.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "daisyui": "^4.4.13",
     "dotenv": "^16.3.1",
     "jsdom": "^23.0.1",
     "lucide-react": "^0.306.0",
