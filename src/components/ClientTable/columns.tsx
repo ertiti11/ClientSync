@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import * as React from "react";
 import { pb } from "@/api/clients";
-import { ArrowUpDown, ChevronDown, MoreHorizontal, Trash } from "lucide-react";
+import { ArrowUpDown, MoreHorizontal, Trash } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
